@@ -1,0 +1,76 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.4.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :resolveMainClassName
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-28T15:31:48.009+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Starting EmployeeManagmentSystemApplication using Java 17.0.10 with PID 21992 (C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem\build\classes\java\main started by Aanya Singh in C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem)
+2026-05-28T15:31:48.017+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:31:48.122+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-28T15:31:48.123+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-28T15:31:49.377+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:31:49.421+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2026-05-28T15:31:50.117+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 2027 (http)
+2026-05-28T15:31:50.134+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:31:50.134+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T15:31:50.180+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2057 ms
+2026-05-28T15:31:50.422+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:31:50.521+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-28T15:31:51.151+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:31:51.208+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-28T15:31:51.361+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e65c60e
+2026-05-28T15:31:51.363+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-28T15:31:51.422+05:30  WARN 21992 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-28T15:31:51.449+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/javabackend?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.39
+	Default catalog/schema: javabackend/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:31:51.991+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-28T15:31:52.000+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:31:52.048+05:30  WARN 21992 --- [EmployeeManagmentSystem] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:31:52.404+05:30  WARN 21992 --- [EmployeeManagmentSystem] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-28T15:31:52.406+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:31:52.410+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-28T15:31:52.417+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-28T15:31:52.425+05:30  INFO 21992 --- [EmployeeManagmentSystem] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-28T15:31:52.442+05:30 ERROR 21992 --- [EmployeeManagmentSystem] [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 2027 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 2027 or configure this application to listen on another port.
+
+
+BUILD SUCCESSFUL in 25s
+5 actionable tasks: 5 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.4.1/userguide/configuration_cache_enabling.html

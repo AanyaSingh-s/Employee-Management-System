@@ -1,0 +1,550 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.4.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-28T15:25:28.628+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Starting EmployeeManagmentSystemApplication using Java 17.0.10 with PID 40708 (C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem\build\classes\java\main started by Aanya Singh in C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem)
+2026-05-28T15:25:28.633+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:25:28.682+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-28T15:25:28.682+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-28T15:25:29.074+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:25:29.089+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2026-05-28T15:25:29.533+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 2027 (http)
+2026-05-28T15:25:29.546+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:25:29.547+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T15:25:29.595+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 905 ms
+2026-05-28T15:25:29.733+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:25:29.797+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-28T15:25:30.300+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:25:30.349+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-28T15:25:30.503+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:javabackend user=SA
+2026-05-28T15:25:30.504+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-28T15:25:30.529+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-28T15:25:30.551+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:javabackend]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: JAVABACKEND/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:25:30.918+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-28T15:25:30.926+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:25:30.965+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:25:31.298+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 2027 (http) with context path '/'
+2026-05-28T15:25:31.304+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Started EmployeeManagmentSystemApplication in 3.041 seconds (process running for 3.398)
+Employee Managment System
+2026-05-28T15:26:25.216+05:30  INFO 40708 --- [EmployeeManagmentSystem] [nio-2027-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-28T15:26:25.216+05:30  INFO 40708 --- [EmployeeManagmentSystem] [nio-2027-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-28T15:26:25.219+05:30  INFO 40708 --- [EmployeeManagmentSystem] [nio-2027-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-05-28T15:31:43.837+05:30  INFO 40708 --- [EmployeeManagmentSystem] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2026-05-28T15:31:44.316+05:30  INFO 40708 --- [EmployeeManagmentSystem] [       Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T15:31:45.165+05:30  INFO 40708 --- [EmployeeManagmentSystem] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T15:31:45.219+05:30  INFO 40708 --- [EmployeeManagmentSystem] [       Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:31:45.410+05:30  WARN 40708 --- [EmployeeManagmentSystem] [       Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-28T15:31:45.413+05:30  INFO 40708 --- [EmployeeManagmentSystem] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-28T15:31:45.440+05:30  INFO 40708 --- [EmployeeManagmentSystem] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-28T15:31:45.985+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Starting EmployeeManagmentSystemApplication using Java 17.0.10 with PID 40708 (C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem\build\classes\java\main started by Aanya Singh in C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem)
+2026-05-28T15:31:45.985+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:31:46.568+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:31:46.584+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2026-05-28T15:31:46.925+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-28T15:31:46.926+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:31:46.928+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T15:31:46.975+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 983 ms
+2026-05-28T15:31:47.058+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-05-28T15:31:47.062+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:cfab257b-bd74-4923-a870-6a099839a3aa user=SA
+2026-05-28T15:31:47.062+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-05-28T15:31:47.071+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:31:47.168+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:31:47.208+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cfab257b-bd74-4923-a870-6a099839a3aa]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CFAB257B-BD74-4923-A870-6A099839A3AA/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:31:47.238+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-28T15:31:47.239+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:31:47.273+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:31:47.380+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-28T15:31:47.384+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Started EmployeeManagmentSystemApplication in 1.463 seconds (process running for 379.479)
+Employee Managment System
+2026-05-28T15:31:48.779+05:30  INFO 40708 --- [EmployeeManagmentSystem] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2026-05-28T15:31:48.782+05:30  INFO 40708 --- [EmployeeManagmentSystem] [       Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T15:31:49.238+05:30  INFO 40708 --- [EmployeeManagmentSystem] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T15:31:49.239+05:30  INFO 40708 --- [EmployeeManagmentSystem] [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:31:49.242+05:30  WARN 40708 --- [EmployeeManagmentSystem] [       Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-28T15:31:49.242+05:30  INFO 40708 --- [EmployeeManagmentSystem] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-05-28T15:31:49.243+05:30  INFO 40708 --- [EmployeeManagmentSystem] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-28T15:31:49.336+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Starting EmployeeManagmentSystemApplication using Java 17.0.10 with PID 40708 (C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem\build\classes\java\main started by Aanya Singh in C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem)
+2026-05-28T15:31:49.336+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:31:49.545+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:31:49.548+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-05-28T15:31:49.614+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 2027 (http)
+2026-05-28T15:31:49.615+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:31:49.615+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T15:31:49.639+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 300 ms
+2026-05-28T15:31:49.681+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:31:49.720+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:31:49.721+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-05-28T15:31:49.929+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68d1b7a8
+2026-05-28T15:31:49.930+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-05-28T15:31:49.960+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-28T15:31:49.963+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/javabackend?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.39
+	Default catalog/schema: javabackend/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:31:50.004+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-28T15:31:50.004+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:31:50.030+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:31:50.094+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-28T15:31:50.095+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:31:50.096+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-05-28T15:31:50.133+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-05-28T15:31:50.138+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-28T15:31:50.155+05:30 ERROR 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 2027 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 2027 or configure this application to listen on another port.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-28T15:34:05.468+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Starting EmployeeManagmentSystemApplication using Java 17.0.10 with PID 40708 (C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem\build\classes\java\main started by Aanya Singh in C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem)
+2026-05-28T15:34:05.468+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:34:05.669+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:34:05.671+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-05-28T15:34:05.753+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-28T15:34:05.755+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:34:05.755+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T15:34:05.783+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 312 ms
+2026-05-28T15:34:05.844+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-05-28T15:34:05.848+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn20: url=jdbc:h2:mem:2ed69a8a-dea0-4bd7-8323-8eb83ca55a64 user=SA
+2026-05-28T15:34:05.848+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-05-28T15:34:05.850+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:34:05.902+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:34:05.905+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:2ed69a8a-dea0-4bd7-8323-8eb83ca55a64]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 2ED69A8A-DEA0-4BD7-8323-8EB83CA55A64/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:34:05.920+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-28T15:34:05.921+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:34:05.946+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:34:05.997+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-28T15:34:06.000+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Started EmployeeManagmentSystemApplication in 0.566 seconds (process running for 518.093)
+2026-05-28T15:34:06.001+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+Employee Managment System
+2026-05-28T15:34:07.413+05:30  INFO 40708 --- [EmployeeManagmentSystem] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2026-05-28T15:34:07.414+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-10] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T15:34:07.627+05:30  INFO 40708 --- [EmployeeManagmentSystem] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T15:34:07.628+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:34:07.628+05:30  WARN 40708 --- [EmployeeManagmentSystem] [      Thread-10] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-28T15:34:07.630+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-05-28T15:34:07.630+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-28T15:34:07.684+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Starting EmployeeManagmentSystemApplication using Java 17.0.10 with PID 40708 (C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem\build\classes\java\main started by Aanya Singh in C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem)
+2026-05-28T15:34:07.684+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:34:07.775+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:34:07.777+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-05-28T15:34:07.818+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 2027 (http)
+2026-05-28T15:34:07.819+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:34:07.819+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T15:34:07.828+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 142 ms
+2026-05-28T15:34:07.844+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:34:07.869+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:34:07.870+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-05-28T15:34:08.065+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10818d60
+2026-05-28T15:34:08.065+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-05-28T15:34:08.066+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-28T15:34:08.067+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/javabackend]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.39
+	Default catalog/schema: javabackend/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:34:08.076+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-28T15:34:08.077+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:34:08.090+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:34:08.133+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-28T15:34:08.133+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:34:08.134+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-05-28T15:34:08.136+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-05-28T15:34:08.138+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-28T15:34:08.140+05:30 ERROR 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 2027 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 2027 or configure this application to listen on another port.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-28T15:36:24.640+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Starting EmployeeManagmentSystemApplication using Java 17.0.10 with PID 40708 (C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem\build\classes\java\main started by Aanya Singh in C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem)
+2026-05-28T15:36:24.640+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:36:24.803+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:36:24.805+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-05-28T15:36:24.851+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-28T15:36:24.851+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:36:24.851+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T15:36:24.863+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 221 ms
+2026-05-28T15:36:24.880+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-05-28T15:36:24.882+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn30: url=jdbc:h2:mem:2b617bc3-7be0-4c05-a950-9cd141bef018 user=SA
+2026-05-28T15:36:24.882+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-05-28T15:36:24.884+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:36:24.909+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:36:24.910+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:2b617bc3-7be0-4c05-a950-9cd141bef018]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 2B617BC3-7BE0-4C05-A950-9CD141BEF018/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:36:24.921+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-28T15:36:24.922+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:36:24.940+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:36:24.993+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-28T15:36:24.995+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Started EmployeeManagmentSystemApplication in 0.389 seconds (process running for 657.089)
+2026-05-28T15:36:24.996+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+Employee Managment System
+2026-05-28T15:36:26.815+05:30  INFO 40708 --- [EmployeeManagmentSystem] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2026-05-28T15:36:26.816+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-18] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T15:36:26.958+05:30  INFO 40708 --- [EmployeeManagmentSystem] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T15:36:26.960+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:36:26.961+05:30  WARN 40708 --- [EmployeeManagmentSystem] [      Thread-18] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-28T15:36:26.961+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-05-28T15:36:26.961+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-28T15:36:27.011+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Starting EmployeeManagmentSystemApplication using Java 17.0.10 with PID 40708 (C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem\build\classes\java\main started by Aanya Singh in C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem)
+2026-05-28T15:36:27.011+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:36:27.109+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:36:27.112+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-05-28T15:36:27.197+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 2027 (http)
+2026-05-28T15:36:27.198+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:36:27.198+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T15:36:27.221+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 209 ms
+2026-05-28T15:36:27.264+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:36:27.316+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:36:27.317+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-05-28T15:36:27.351+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39d06d7f
+2026-05-28T15:36:27.351+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-05-28T15:36:27.353+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-28T15:36:27.354+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/javabackend]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.39
+	Default catalog/schema: javabackend/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:36:27.376+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-28T15:36:27.378+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:36:27.401+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:36:27.513+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 2027 (http) with context path '/'
+2026-05-28T15:36:27.515+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Started EmployeeManagmentSystemApplication in 0.516 seconds (process running for 659.609)
+2026-05-28T15:36:27.515+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+Employee Managment System
+2026-05-28T15:38:30.726+05:30  INFO 40708 --- [EmployeeManagmentSystem] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-28T15:38:30.727+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-26] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T15:38:31.162+05:30  INFO 40708 --- [EmployeeManagmentSystem] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T15:38:31.163+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-26] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:38:31.164+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-05-28T15:38:31.171+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-28T15:38:31.271+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Starting EmployeeManagmentSystemApplication using Java 17.0.10 with PID 40708 (C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem\build\classes\java\main started by Aanya Singh in C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem)
+2026-05-28T15:38:31.272+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:38:31.469+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:38:31.472+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-05-28T15:38:31.603+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 2027 (http)
+2026-05-28T15:38:31.603+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:38:31.603+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T15:38:31.626+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 351 ms
+2026-05-28T15:38:31.661+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:38:31.699+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:38:31.701+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-05-28T15:38:31.719+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5dc47fae
+2026-05-28T15:38:31.719+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-05-28T15:38:31.721+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-28T15:38:31.722+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/javabackend]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.39
+	Default catalog/schema: javabackend/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:38:31.740+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-28T15:38:31.742+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:38:31.766+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:38:31.843+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-28T15:38:31.844+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:38:31.844+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-05-28T15:38:31.895+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-05-28T15:38:31.901+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-28T15:38:31.907+05:30 ERROR 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 2027 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 2027 or configure this application to listen on another port.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-28T15:39:56.650+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Starting EmployeeManagmentSystemApplication using Java 17.0.10 with PID 40708 (C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem\build\classes\java\main started by Aanya Singh in C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem)
+2026-05-28T15:39:56.651+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:39:56.870+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:39:56.872+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-05-28T15:39:56.997+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-28T15:39:56.998+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:39:56.998+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T15:39:57.030+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 376 ms
+2026-05-28T15:39:57.064+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-05-28T15:39:57.069+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn40: url=jdbc:h2:mem:b67586c2-b504-4ecf-8e80-5dc1b50e98ec user=SA
+2026-05-28T15:39:57.069+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-05-28T15:39:57.071+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:39:57.137+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:39:57.139+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:b67586c2-b504-4ecf-8e80-5dc1b50e98ec]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: B67586C2-B504-4ECF-8E80-5DC1B50E98EC/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:39:57.178+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-28T15:39:57.180+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:39:57.212+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:39:57.322+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-28T15:39:57.324+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Started EmployeeManagmentSystemApplication in 0.702 seconds (process running for 869.419)
+2026-05-28T15:39:57.333+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+Employee Managment System
+2026-05-28T15:39:58.721+05:30  INFO 40708 --- [EmployeeManagmentSystem] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-28T15:39:58.722+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-30] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T15:39:59.107+05:30  INFO 40708 --- [EmployeeManagmentSystem] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T15:39:59.108+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-30] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:39:59.109+05:30  WARN 40708 --- [EmployeeManagmentSystem] [      Thread-30] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-28T15:39:59.109+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2026-05-28T15:39:59.110+05:30  INFO 40708 --- [EmployeeManagmentSystem] [      Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-28T15:39:59.187+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Starting EmployeeManagmentSystemApplication using Java 17.0.10 with PID 40708 (C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem\build\classes\java\main started by Aanya Singh in C:\Users\Aanya Singh\Downloads\EmployeeManagmentSystem\EmployeeManagmentSystem)
+2026-05-28T15:39:59.187+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T15:39:59.316+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-28T15:39:59.319+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-05-28T15:39:59.391+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 2027 (http)
+2026-05-28T15:39:59.391+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T15:39:59.392+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T15:39:59.411+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 221 ms
+2026-05-28T15:39:59.441+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-28T15:39:59.483+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-28T15:39:59.484+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2026-05-28T15:39:59.504+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24f56339
+2026-05-28T15:39:59.504+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2026-05-28T15:39:59.506+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-28T15:39:59.507+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/javabackend]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.39
+	Default catalog/schema: javabackend/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-28T15:39:59.534+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-28T15:39:59.535+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-28T15:39:59.567+05:30  WARN 40708 --- [EmployeeManagmentSystem] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-28T15:39:59.676+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 2027 (http) with context path '/'
+2026-05-28T15:39:59.679+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] E.E.EmployeeManagmentSystemApplication   : Started EmployeeManagmentSystemApplication in 0.513 seconds (process running for 871.774)
+2026-05-28T15:39:59.680+05:30  INFO 40708 --- [EmployeeManagmentSystem] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+Employee Managment System
+2026-05-28T15:40:51.929+05:30  INFO 40708 --- [EmployeeManagmentSystem] [nio-2027-exec-1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-28T15:40:51.929+05:30  INFO 40708 --- [EmployeeManagmentSystem] [nio-2027-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-28T15:40:51.932+05:30  INFO 40708 --- [EmployeeManagmentSystem] [nio-2027-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+
+> Task :bootRun FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':bootRun'.
+> Process 'command 'C:\Users\Aanya Singh\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.10.7-hotspot\bin\java.exe'' finished with non-zero exit value -1 (NTSTATUS 0xFFFFFFFF)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 19m 45s
+4 actionable tasks: 1 executed, 3 up-to-date
