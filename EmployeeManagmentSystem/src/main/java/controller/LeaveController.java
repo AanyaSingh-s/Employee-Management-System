@@ -51,4 +51,25 @@ public class LeaveController {
         leaveRepository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+    @GetMapping("/status/{status}")
+    public List<Leave> getByStatus(@PathVariable String status) {
+        return leaveRepository.findByStatus(status);
+    }
+
+    @GetMapping("/employee/{employeeId}")
+    public List<Leave> getByEmployee(@PathVariable Long employeeId) {
+        return leaveRepository.findByEmployeeId(employeeId);
+    }
+
+    @PatchMapping("/{id}/status")
+    public ResponseEntity<?> updateStatus(
+            @PathVariable Integer id,
+            @RequestBody Map<String, String> body) {
+        return leaveRepository.findById(id)
+                .map(leave -> {
+                    leave.setStatus(body.get("status"));
+                    return ResponseEntity.ok(leaveRepository.save(leave));
+                })
+                .orElse(ResponseEntity.notFound().build());
+    }
 }
