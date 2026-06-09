@@ -51,4 +51,14 @@ public class DutyController {
         dutyRepository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/employee/{employeeId}")
+    public List<Duty> getByEmployee(@PathVariable Long employeeId) {
+        return dutyRepository.findByEmployeeId(employeeId);
+    }
+
+    @GetMapping("/manager/{managerId}")
+    public List<Duty> getByManager(@PathVariable Long managerId) {
+        return dutyRepository.findByAssignedByManagerId(managerId);
+    }
 }
