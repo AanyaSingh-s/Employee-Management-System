@@ -51,4 +51,11 @@ public class AdminController {
         adminRepository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/username/{username}")
+    public ResponseEntity<Admin> getByUsername(@PathVariable String username) {
+        return adminRepository.findByUsername(username)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
 }
