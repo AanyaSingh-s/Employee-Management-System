@@ -14,11 +14,13 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 		"repository",
 		"controller",
 		"service",
-		"config"
+		"config",
+		"security"
 })
 @EntityScan(basePackages = "model")
 @EnableJpaRepositories(basePackages = "repository")
 public class EmployeeManagementSystemApplication {
+
 
 
 	public static void main(String[] args) {

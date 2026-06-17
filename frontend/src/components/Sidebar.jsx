@@ -27,9 +27,6 @@ export default function Sidebar() {
       </div>
 
       <nav className="flex-1 space-y-1 overflow-y-auto">
-        <p className="mb-6 px-8 text-[9px] font-bold uppercase tracking-[0.25em] text-white/30">
-          Core Navigation
-        </p>
 
         {navItems.map((item) => (
           <div key={item.to} className="relative">

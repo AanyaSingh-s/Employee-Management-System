@@ -15,13 +15,18 @@ public class AuthService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final security.JwtService jwtService;
 
-    public AuthService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    public AuthService(UserRepository userRepository, PasswordEncoder passwordEncoder, security.JwtService jwtService) {
+
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
+        this.jwtService = jwtService;
     }
 
+
     public Map<String, Object> signup(String username, String password) {
+
         String normalizedUsername = username.trim();
 
         if (userRepository.existsByUsername(normalizedUsername)) {
@@ -38,6 +43,8 @@ public class AuthService {
 
     @Transactional(readOnly = true)
     public Map<String, Object> login(String username, String password) {
+
+
         User user = userRepository.findByUsername(username.trim())
                 .orElseThrow(() -> new IllegalArgumentException("Invalid username or password."));
 
@@ -45,8 +52,14 @@ public class AuthService {
             throw new IllegalArgumentException("Invalid username or password.");
         }
 
-        return toResponse(user, "Login successful.");
+        String token = jwtService.generateToken(user.getUsername(), user.getId());
+
+        Map<String, Object> response = toResponse(user, "Login successful.");
+        response.put("token", token);
+        return response;
+
     }
+
 
     private Map<String, Object> toResponse(User user, String message) {
         Map<String, Object> response = new LinkedHashMap<>();

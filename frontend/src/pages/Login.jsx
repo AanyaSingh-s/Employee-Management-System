@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { authApi } from '../api/services';
-import { isAuthenticated, saveUser } from '../lib/auth';
+import { isAuthenticated, saveToken, saveUser } from '../lib/auth';
+
 import { btnPrimary, inputClass, labelClass } from '../lib/ui';
 import Alert from '../components/Alert';
 
@@ -43,7 +44,9 @@ export default function Login() {
 
     try {
       const data = await authApi.login(form.username, form.password);
+      saveToken(data.token);
       saveUser({ id: data.id, username: data.username });
+
       navigate('/dashboard');
     } catch (err) {
       setApiError(err.message || 'Login failed. Please try again.');
@@ -107,7 +110,7 @@ export default function Login() {
         </form>
 
         <p className="mt-6 text-center text-sm text-[#1B1B1E]/50">
-          Don&apos;t have an account?{' '}
+          Don't have an account?{' '}
           <Link to="/signup" className="font-bold text-[#0B2545] hover:underline">
             Sign up
           </Link>

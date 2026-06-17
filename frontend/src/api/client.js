@@ -1,9 +1,12 @@
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:2027';
 
 async function request(path, options = {}) {
+  const token = localStorage.getItem('ems_token');
+
   const response = await fetch(`${API_BASE}${path}`, {
     headers: {
       'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
       ...options.headers,
     },
     ...options,
@@ -31,3 +34,4 @@ export const api = {
   patch: (path, body) => request(path, { method: 'PATCH', body: JSON.stringify(body) }),
   delete: (path) => request(path, { method: 'DELETE' }),
 };
+

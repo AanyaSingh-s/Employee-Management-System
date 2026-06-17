@@ -49,6 +49,7 @@ public class AuthController {
             }
 
             return ResponseEntity.ok(authService.login(username, password));
+
         } catch (IllegalArgumentException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", e.getMessage()));
         }
