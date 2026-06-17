@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/EmployeeManagmentSystem.iml" filepath="$PROJECT_DIR$/.idea/EmployeeManagmentSystem.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EmployeeManagmentSystem.EmployeeManagmentSystem.main.iml" filepath="$PROJECT_DIR$/.idea/modules/EmployeeManagmentSystem.EmployeeManagmentSystem.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EmployeeManagmentSystem.EmployeeManagmentSystem.main~1.iml" filepath="$PROJECT_DIR$/.idea/modules/EmployeeManagmentSystem.EmployeeManagmentSystem.main~1.iml" />
     </modules>
   </component>
 </project>

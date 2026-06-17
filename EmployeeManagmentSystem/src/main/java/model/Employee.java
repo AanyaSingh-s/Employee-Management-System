@@ -2,12 +2,15 @@ package model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 import java.util.List;
 @Entity
 @Table(name = "employee_table")
 public class Employee {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "emp_id")
     private Long id;
     @Column(name = "emp_name" , nullable = false)
@@ -149,4 +152,12 @@ public class Employee {
     @JoinColumn(name = "manager_id")
     private Manager manager;
 
+    public Manager getManager() {
+        return manager;
+    }
+
+    public void setManager(Manager manager) {
+        this.manager = manager;
+    }
 }
+

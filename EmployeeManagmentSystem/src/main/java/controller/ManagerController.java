@@ -1,14 +1,17 @@
 package controller;
 
 import model.Manager;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import repository.ManagerRepository;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/managers")
+@CrossOrigin(origins = "http://localhost:3000")
 public class ManagerController {
 
     private final ManagerRepository managerRepository;
@@ -30,8 +33,8 @@ public class ManagerController {
     }
 
     @PostMapping
-    public Manager create(@RequestBody Manager manager) {
-        return managerRepository.save(manager);
+    public ResponseEntity<Manager> create(@RequestBody Manager manager) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(managerRepository.save(manager));
     }
 
     @PutMapping("/{id}")
@@ -50,5 +53,10 @@ public class ManagerController {
         }
         managerRepository.deleteById(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/department/{department}")
+    public List<Manager> getByDepartment(@PathVariable String department) {
+        return managerRepository.findByDepartment(department);
     }
 }

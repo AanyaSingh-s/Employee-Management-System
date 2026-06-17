@@ -12,7 +12,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 		"EmployeeManagmentSystem.EmployeeManagmentSystem",
 		"model",
 		"repository",
-		"controller"
+		"controller",
+		"service",
+		"config"
 })
 @EntityScan(basePackages = "model")
 @EnableJpaRepositories(basePackages = "repository")

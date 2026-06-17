@@ -1,6 +1,7 @@
 package controller;
 
 import model.Duty;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import repository.DutyRepository;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/duties")
+@CrossOrigin(origins = "http://localhost:3000")
 public class DutyController {
 
     private final DutyRepository dutyRepository;
@@ -30,8 +32,8 @@ public class DutyController {
     }
 
     @PostMapping
-    public Duty create(@RequestBody Duty duty) {
-        return dutyRepository.save(duty);
+    public ResponseEntity<Duty> create(@RequestBody Duty duty) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(dutyRepository.save(duty));
     }
 
     @PutMapping("/{id}")

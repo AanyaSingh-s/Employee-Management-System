@@ -1,14 +1,17 @@
 package controller;
 
 import model.Leave;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import repository.LeaveRepository;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/leaves")
+@CrossOrigin(origins = "http://localhost:3000")
 public class LeaveController {
 
     private final LeaveRepository leaveRepository;
@@ -30,8 +33,8 @@ public class LeaveController {
     }
 
     @PostMapping
-    public Leave create(@RequestBody Leave leave) {
-        return leaveRepository.save(leave);
+    public ResponseEntity<Leave> create(@RequestBody Leave leave) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(leaveRepository.save(leave));
     }
 
     @PutMapping("/{id}")

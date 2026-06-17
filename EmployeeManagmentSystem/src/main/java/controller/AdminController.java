@@ -1,6 +1,7 @@
 package controller;
 
 import model.Admin;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import repository.AdminRepository;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/admins")
+@CrossOrigin(origins = "http://localhost:3000")
 public class AdminController {
 
     private final AdminRepository adminRepository;
@@ -30,8 +32,8 @@ public class AdminController {
     }
 
     @PostMapping
-    public Admin create(@RequestBody Admin admin) {
-        return adminRepository.save(admin);
+    public ResponseEntity<Admin> create(@RequestBody Admin admin) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(adminRepository.save(admin));
     }
 
     @PutMapping("/{id}")

@@ -7,13 +7,13 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.46/a5cfe99fdf320e84955ef653f2ce1bf789d11385/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="EmployeeManagmentSystem.EmployeeManagmentSystem.main" />
-        <module name="EmployeeManagmentSystem.EmployeeManagmentSystem.test" />
+        <module name="EmployeeManagmentSystem.EmployeeManagmentSystem.test~1" />
+        <module name="EmployeeManagmentSystem.EmployeeManagmentSystem.main~1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="EmployeeManagmentSystem.EmployeeManagmentSystem.main~1" target="17" />
-      <module name="EmployeeManagmentSystem.EmployeeManagmentSystem.test~1" target="17" />
+      <module name="EmployeeManagmentSystem.EmployeeManagmentSystem.main" target="17" />
+      <module name="EmployeeManagmentSystem.EmployeeManagmentSystem.test" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

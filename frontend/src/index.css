@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-[#F8F9FA] text-[#1B1B1E] antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .font-serif {
+    font-family: 'Newsreader', serif;
+  }
+
+  .tracked-header {
+    @apply text-[9px] font-extrabold uppercase tracking-[0.3em];
+  }
+
+  .sidebar-link-active {
+    @apply bg-[#E9ECEF] text-[#1B1B1E] !important;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F8F9FA;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #E9ECEF;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D1D5DB;
+  }
+}
