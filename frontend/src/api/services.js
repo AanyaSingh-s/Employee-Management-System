@@ -5,6 +5,7 @@ export const authApi = {
     api.post('/api/auth/signup', { username, password }),
   login: (username, password) =>
     api.post('/api/auth/login', { username, password }),
+  logout: () => api.post('/api/auth/logout'),
 };
 
 export const homeApi = {

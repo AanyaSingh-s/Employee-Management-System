@@ -1,13 +1,14 @@
 package service;
 
-import model.User;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.UserRepository;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import model.User;
+import repository.UserRepository;
 
 @Service
 @Transactional
@@ -41,7 +42,6 @@ public class AuthService {
         return toResponse(saved, "Account created successfully.");
     }
 
-    @Transactional(readOnly = true)
     public Map<String, Object> login(String username, String password) {
 
 
@@ -54,10 +54,26 @@ public class AuthService {
 
         String token = jwtService.generateToken(user.getUsername(), user.getId());
 
+        user.setLastLoginTime(jwtService.getLoginTime(token));
+        userRepository.save(user);
+
         Map<String, Object> response = toResponse(user, "Login successful.");
         response.put("token", token);
+        response.put("lastLoginTime", user.getLastLoginTime());
         return response;
 
+    }
+
+    public Map<String, Object> logout(Long userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new IllegalArgumentException("User not found."));
+
+        user.setLastLogoutTime(java.time.LocalDateTime.now());
+        userRepository.save(user);
+
+        Map<String, Object> response = toResponse(user, "Logout successful.");
+        response.put("lastLogoutTime", user.getLastLogoutTime());
+        return response;
     }
 
 

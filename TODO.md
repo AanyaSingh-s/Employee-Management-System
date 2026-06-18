@@ -1,18 +1,23 @@
-# TODO - Add JWT (Approach A: custom JWT + Spring Security filter)
+## TODO — Login/Logout timestamps in `users` table (same user table)
 
-- [x] Update backend dependencies in `EmployeeManagmentSystem/build.gradle` (jjwt + Spring Security web)
-- [x] Add JWT settings to `EmployeeManagmentSystem/src/main/resources/application.properties`
-- [x] Create `JwtService` (generate/validate token)
-- [x] Create `JwtAuthFilter` (reads `Authorization: Bearer ...`)
-- [x] Create `SecurityConfig` (permit auth endpoints, require JWT for others)
+### Step 1: Backend model updates
+- [ ] Update `EmployeeManagmentSystem/src/main/java/model/User.java` to add:
+  - `lastLogin` mapped to `last_login`
+  - `lastLogout` mapped to `last_logout`
 
-- [ ] Update `AuthService.login` to generate token
-- [ ] Update `AuthController.login` to return `token`
-- [ ] Update frontend `frontend/src/lib/auth.js` to store/get token
-- [ ] Update frontend `frontend/src/api/client.js` to attach `Authorization` header
-- [ ] Update `frontend/src/pages/Login.jsx` to save token from login response
-- [ ] Ensure `ProtectedRoute.jsx` uses token-based `isAuthenticated()`
-- [x] Run backend build/test (gradle)
+### Step 2: Backend login updates
+- [ ] Update `EmployeeManagmentSystem/src/main/java/service/AuthService.java` so on successful login it sets `user.lastLogin = now` and saves the user.
 
-- [x] Validate end-to-end: login -> token stored -> protected API succeeds with header
+### Step 3: Add logout endpoint
+- [ ] Add `POST /api/auth/logout` endpoint in `EmployeeManagmentSystem/src/main/java/controller/AuthController.java`.
+- [ ] Implement logic in `AuthService` to set `lastLogout = now` for the authenticated user (using token-derived `userId` from `SecurityContext`).
 
+### Step 4: Ensure auth-protection in security config
+- [ ] Confirm `/api/auth/logout` is **not** in `permitAll` and is handled by `.anyRequest().authenticated()`.
+
+### Step 5: Frontend logout updates
+- [ ] Update the frontend logout function (currently only clears localStorage in `frontend/src/lib/auth.js`) to also call `POST /api/auth/logout` before clearing.
+
+### Step 6: Test
+- [ ] Run backend; perform login; verify DB columns updated.
+- [ ] Trigger logout; verify `last_logout` updated.

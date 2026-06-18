@@ -1,15 +1,19 @@
 package security;
 
+import java.security.Key;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-
-import java.security.Key;
-import java.util.Date;
 
 @Service
 public class JwtService {
@@ -32,6 +36,7 @@ public class JwtService {
         return Jwts.builder()
                 .setSubject(username)
                 .claim("uid", userId)
+                .claim("login_time", now.getTime())
                 .setIssuedAt(now)
                 .setExpiration(expiry)
                 .signWith(signingKey, SignatureAlgorithm.HS256)
@@ -57,6 +62,22 @@ public class JwtService {
         if (uid instanceof Integer i) return i.longValue();
         if (uid instanceof Long l) return l;
         return Long.parseLong(uid.toString());
+    }
+
+    public LocalDateTime getLoginTime(String token) {
+        Claims claims = parseClaims(token);
+        Object loginTime = claims.get("login_time");
+        if (loginTime instanceof Number number) {
+            return LocalDateTime.ofInstant(
+                    Instant.ofEpochMilli(number.longValue()),
+                    ZoneId.systemDefault()
+            );
+        }
+        Date issuedAt = claims.getIssuedAt();
+        if (issuedAt != null) {
+            return LocalDateTime.ofInstant(issuedAt.toInstant(), ZoneId.systemDefault());
+        }
+        return LocalDateTime.now();
     }
 
     private Claims parseClaims(String token) {

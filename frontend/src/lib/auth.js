@@ -22,7 +22,16 @@ export function isAuthenticated() {
   return !!getToken();
 }
 
-export function logout() {
+export async function logout() {
+  const token = getToken();
+  if (token) {
+    try {
+      const { authApi } = await import('../api/services');
+      await authApi.logout();
+    } catch {
+      // Clear local session even if the server call fails
+    }
+  }
   localStorage.removeItem(USER_KEY);
   localStorage.removeItem(TOKEN_KEY);
 }

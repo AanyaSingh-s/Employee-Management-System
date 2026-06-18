@@ -7,8 +7,8 @@ export default function PageHeader({ title, subtitle, action }) {
   const username = user?.username || 'Guest';
   const initial = username.charAt(0).toUpperCase();
 
-  const handleLogout = () => {
-    logout();
+  const handleLogout = async () => {
+    await logout();
     navigate('/');
   };
 
