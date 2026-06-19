@@ -118,7 +118,7 @@ export default function Employees() {
         setSuccess('Employee record updated.');
       } else {
         await employeeApi.create(payload);
-        setSuccess('New employee record created.');
+        setSuccess('Employee submitted for admin approval.');
       }
       setModalOpen(false);
       loadData();
@@ -198,13 +198,14 @@ export default function Employees() {
                   <th className={thClass}>Department</th>
                   <th className={thClass}>Designation</th>
                   <th className={thClass}>Manager</th>
+                  <th className={thClass}>Approval</th>
                   <th className={`${thClass} text-right`}>Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#E9ECEF]">
                 {employees.length === 0 ? (
                   <tr>
-                    <td colSpan="6" className={`${tdClass} py-20 text-center text-[#1B1B1E]/40 font-bold uppercase tracking-widest text-[10px]`}>
+                    <td colSpan="7" className={`${tdClass} py-20 text-center text-[#1B1B1E]/40 font-bold uppercase tracking-widest text-[10px]`}>
                       No records found in directory
                     </td>
                   </tr>
@@ -225,6 +226,15 @@ export default function Employees() {
                       </td>
                       <td className={`${tdClass} text-[#1B1B1E]/60`}>{emp.designation}</td>
                       <td className={`${tdClass} text-[#1B1B1E]/60`}>{emp.manager?.name || '—'}</td>
+                      <td className={tdClass}>
+                        <span className={`px-3 py-1 text-[8px] font-extrabold uppercase tracking-[0.15em] border ${
+                          emp.approvalStatus === 'PENDING' ? 'bg-amber-50 text-amber-600 border-amber-200' :
+                          emp.approvalStatus === 'APPROVED' ? 'bg-emerald-50 text-emerald-600 border-emerald-200' :
+                          'bg-red-50 text-red-600 border-red-200'
+                        }`}>
+                          {emp.approvalStatus || 'PENDING'}
+                        </span>
+                      </td>
                       <td className={`${tdClass} text-right`}>
                         <div className="flex justify-end gap-4">
                           <button

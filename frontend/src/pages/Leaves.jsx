@@ -28,7 +28,6 @@ const emptyForm = {
   startDate: '',
   endDate: '',
   reason: '',
-  status: 'PENDING',
   employeeId: '',
 };
 
@@ -49,7 +48,7 @@ export default function Leaves() {
     try {
       const [leaveData, empData] = await Promise.all([
         statusFilter ? leaveApi.getByStatus(statusFilter) : leaveApi.getAll(),
-        employeeApi.getAll(),
+        employeeApi.getApproved(),
       ]);
       setLeaves(leaveData);
       setEmployees(empData);
@@ -76,7 +75,6 @@ export default function Leaves() {
       startDate: leave.startDate || '',
       endDate: leave.endDate || '',
       reason: leave.reason || '',
-      status: leave.status || 'PENDING',
       employeeId: leave.employee?.id || '',
     });
     setModalOpen(true);
@@ -90,7 +88,7 @@ export default function Leaves() {
       startDate: form.startDate,
       endDate: form.endDate,
       reason: form.reason,
-      status: form.status,
+      status: 'PENDING',
       employee: { id: Number(form.employeeId) },
     };
 
@@ -100,19 +98,9 @@ export default function Leaves() {
         setSuccess('Leave request updated.');
       } else {
         await leaveApi.create(payload);
-        setSuccess('New leave request submitted.');
+        setSuccess('Leave request submitted for admin approval.');
       }
       setModalOpen(false);
-      loadData();
-    } catch (err) {
-      setError(err.message);
-    }
-  };
-
-  const handleStatusChange = async (id, status) => {
-    try {
-      await leaveApi.updateStatus(id, status);
-      setSuccess(`Request marked as ${status}.`);
       loadData();
     } catch (err) {
       setError(err.message);
@@ -210,12 +198,6 @@ export default function Leaves() {
                       </td>
                       <td className={`${tdClass} text-right`}>
                         <div className="flex justify-end gap-4">
-                          {leave.status === 'PENDING' && (
-                            <>
-                              <button type="button" className="text-emerald-600 font-bold text-[10px] uppercase tracking-widest hover:underline underline-offset-4" onClick={() => handleStatusChange(leave.id, 'APPROVED')}>Authorize</button>
-                              <button type="button" className="text-red-600 font-bold text-[10px] uppercase tracking-widest hover:underline underline-offset-4" onClick={() => handleStatusChange(leave.id, 'REJECTED')}>Decline</button>
-                            </>
-                          )}
                           <button type="button" className="text-[#0B2545] font-bold text-[10px] uppercase tracking-widest hover:underline underline-offset-4" onClick={() => openEdit(leave)}>Modify</button>
                         </div>
                       </td>
@@ -236,14 +218,6 @@ export default function Leaves() {
                   <option value="">Select Employee...</option>
                   {employees.map((emp) => (
                     <option key={emp.id} value={emp.id}>{emp.name}</option>
-                  ))}
-                </select>
-              </label>
-              <label className={labelClass}>
-                Authorization Status
-                <select className={inputClass} value={form.status} onChange={(e) => updateField('status', e.target.value)}>
-                  {STATUSES.map((s) => (
-                    <option key={s} value={s}>{s}</option>
                   ))}
                 </select>
               </label>

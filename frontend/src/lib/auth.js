@@ -22,6 +22,14 @@ export function isAuthenticated() {
   return !!getToken();
 }
 
+export function isAdmin() {
+  return getUser()?.role === 'ADMIN';
+}
+
+export function isRegularUser() {
+  return isAuthenticated() && getUser()?.role !== 'ADMIN';
+}
+
 export async function logout() {
   const token = getToken();
   if (token) {
@@ -35,4 +43,3 @@ export async function logout() {
   localStorage.removeItem(USER_KEY);
   localStorage.removeItem(TOKEN_KEY);
 }
-

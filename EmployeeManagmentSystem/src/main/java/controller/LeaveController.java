@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import repository.LeaveRepository;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/leaves")
@@ -34,6 +33,7 @@ public class LeaveController {
 
     @PostMapping
     public ResponseEntity<Leave> create(@RequestBody Leave leave) {
+        leave.setStatus("PENDING");
         return ResponseEntity.status(HttpStatus.CREATED).body(leaveRepository.save(leave));
     }
 
@@ -62,17 +62,5 @@ public class LeaveController {
     @GetMapping("/employee/{employeeId}")
     public List<Leave> getByEmployee(@PathVariable Long employeeId) {
         return leaveRepository.findByEmployeeId(employeeId);
-    }
-
-    @PatchMapping("/{id}/status")
-    public ResponseEntity<?> updateStatus(
-            @PathVariable Integer id,
-            @RequestBody Map<String, String> body) {
-        return leaveRepository.findById(id)
-                .map(leave -> {
-                    leave.setStatus(body.get("status"));
-                    return ResponseEntity.ok(leaveRepository.save(leave));
-                })
-                .orElse(ResponseEntity.notFound().build());
     }
 }

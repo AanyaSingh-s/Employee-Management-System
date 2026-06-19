@@ -22,6 +22,10 @@ public class User {
     @Column(name = "last_logout_time")
     private java.time.LocalDateTime lastLogoutTime;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 20)
+    private UserRole role = UserRole.USER;
+
     public Long getId() {
         return id;
     }
@@ -60,5 +64,13 @@ public class User {
 
     public void setLastLogoutTime(java.time.LocalDateTime lastLogoutTime) {
         this.lastLogoutTime = lastLogoutTime;
+    }
+
+    public UserRole getRole() {
+        return role;
+    }
+
+    public void setRole(UserRole role) {
+        this.role = role;
     }
 }

@@ -29,13 +29,14 @@ public class JwtService {
         this.expirationMs = expirationMs;
     }
 
-    public String generateToken(String username, Long userId) {
+    public String generateToken(String username, Long userId, String role) {
         Date now = new Date();
         Date expiry = new Date(now.getTime() + expirationMs);
 
         return Jwts.builder()
                 .setSubject(username)
                 .claim("uid", userId)
+                .claim("role", role)
                 .claim("login_time", now.getTime())
                 .setIssuedAt(now)
                 .setExpiration(expiry)
@@ -62,6 +63,11 @@ public class JwtService {
         if (uid instanceof Integer i) return i.longValue();
         if (uid instanceof Long l) return l;
         return Long.parseLong(uid.toString());
+    }
+
+    public String getRole(String token) {
+        Object role = parseClaims(token).get("role");
+        return role != null ? role.toString() : "USER";
     }
 
     public LocalDateTime getLoginTime(String token) {

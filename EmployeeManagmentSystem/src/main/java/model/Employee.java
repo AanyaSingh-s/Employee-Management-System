@@ -34,6 +34,8 @@ public class Employee {
     @Column(name = "emp_contact" , nullable = false)
     private String contact;
 
+    @Column(name = "approval_status", nullable = false)
+    private String approvalStatus = "PENDING";
 
     public Long getId() {
         return id;
@@ -121,6 +123,14 @@ public class Employee {
 
     public void setContact(String contact) {
         this.contact = contact;
+    }
+
+    public String getApprovalStatus() {
+        return approvalStatus;
+    }
+
+    public void setApprovalStatus(String approvalStatus) {
+        this.approvalStatus = approvalStatus;
     }
 
     public List<Leave> getLeave() {

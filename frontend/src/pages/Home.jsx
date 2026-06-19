@@ -1,9 +1,12 @@
 import { Link, Navigate } from 'react-router-dom';
-import { isAuthenticated } from '../lib/auth';
+import { isAdmin, isAuthenticated, isRegularUser } from '../lib/auth';
 import { btnPrimary, btnSecondary } from '../lib/ui';
 
 export default function Home() {
-  if (isAuthenticated()) {
+  if (isAdmin()) {
+    return <Navigate to="/admin/approvals" replace />;
+  }
+  if (isRegularUser()) {
     return <Navigate to="/dashboard" replace />;
   }
 
@@ -22,6 +25,9 @@ export default function Home() {
           </Link>
           <Link to="/signup" className={`${btnPrimary} !h-12 !px-8 !text-[10px]`}>
             Sign Up
+          </Link>
+          <Link to="/admin/login" className={`${btnSecondary} !h-12 !px-8 !text-[10px] !border-white/20 !text-[#0B2545]`}>
+            Admin
           </Link>
         </div>
       </header>

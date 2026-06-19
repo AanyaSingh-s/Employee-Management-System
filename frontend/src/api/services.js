@@ -2,10 +2,23 @@ import { api } from './client';
 
 export const authApi = {
   signup: (username, password) =>
-    api.post('/api/auth/signup', { username, password }),
+    api.post('/api/auth/signup', { username, password }, { skipAuth: true }),
   login: (username, password) =>
-    api.post('/api/auth/login', { username, password }),
+    api.post('/api/auth/login', { username, password }, { skipAuth: true }),
+  adminSignup: (username, password) =>
+    api.post('/api/auth/admin/signup', { username, password }, { skipAuth: true }),
+  adminLogin: (username, password) =>
+    api.post('/api/auth/admin/login', { username, password }, { skipAuth: true }),
   logout: () => api.post('/api/auth/logout'),
+};
+
+export const approvalApi = {
+  getPendingEmployees: () => api.get('/api/admin/approvals/employees/pending'),
+  getPendingLeaves: () => api.get('/api/admin/approvals/leaves/pending'),
+  approveEmployee: (id) => api.patch(`/api/admin/approvals/employees/${id}/approve`),
+  rejectEmployee: (id) => api.patch(`/api/admin/approvals/employees/${id}/reject`),
+  approveLeave: (id) => api.patch(`/api/admin/approvals/leaves/${id}/approve`),
+  rejectLeave: (id) => api.patch(`/api/admin/approvals/leaves/${id}/reject`),
 };
 
 export const homeApi = {
@@ -18,6 +31,7 @@ export const employeeApi = {
   search: (keyword) => api.get(`/api/employees/search?keyword=${encodeURIComponent(keyword)}`),
   getByDepartment: (department) => api.get(`/api/employees/department/${encodeURIComponent(department)}`),
   getByManager: (managerId) => api.get(`/api/employees/manager/${managerId}`),
+  getApproved: () => api.get('/api/employees/approved'),
   create: (data) => api.post('/api/employees', data),
   update: (id, data) => api.put(`/api/employees/${id}`, data),
   delete: (id) => api.delete(`/api/employees/${id}`),
@@ -47,7 +61,6 @@ export const leaveApi = {
   getByEmployee: (employeeId) => api.get(`/api/leaves/employee/${employeeId}`),
   create: (data) => api.post('/api/leaves', data),
   update: (id, data) => api.put(`/api/leaves/${id}`, data),
-  updateStatus: (id, status) => api.patch(`/api/leaves/${id}/status`, { status }),
   delete: (id) => api.delete(`/api/leaves/${id}`),
 };
 

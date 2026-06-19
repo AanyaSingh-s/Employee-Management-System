@@ -15,6 +15,8 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     List<Employee> findByManagerId(Long managerId);
 
+    List<Employee> findByApprovalStatus(String approvalStatus);
+
     boolean existsByUsername(String username);
 
     boolean existsByEmail(String email);

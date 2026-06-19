@@ -46,6 +46,7 @@ public class EmployeeController {
             return ResponseEntity.status(HttpStatus.CONFLICT)
                     .body(Map.of("error", "Email already registered."));
         }
+        employee.setApprovalStatus("PENDING");
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(employeeRepository.save(employee));
     }
@@ -94,5 +95,10 @@ public class EmployeeController {
     @GetMapping("/manager/{managerId}")
     public List<Employee> getByManager(@PathVariable Long managerId) {
         return employeeRepository.findByManagerId(managerId);
+    }
+
+    @GetMapping("/approved")
+    public List<Employee> getApproved() {
+        return employeeRepository.findByApprovalStatus("APPROVED");
     }
 }

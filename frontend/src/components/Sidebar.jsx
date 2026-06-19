@@ -4,7 +4,6 @@ const navItems = [
   { to: '/dashboard', label: 'Dashboard', icon: 'ti-layout-dashboard' },
   { to: '/employees', label: 'Employees', icon: 'ti-users' },
   { to: '/managers', label: 'Managers', icon: 'ti-briefcase' },
-  { to: '/admins', label: 'Admins', icon: 'ti-shield-lock' },
   { to: '/leaves', label: 'Leaves', icon: 'ti-calendar-off' },
   { to: '/duties', label: 'Duties', icon: 'ti-clipboard-list' },
 ];

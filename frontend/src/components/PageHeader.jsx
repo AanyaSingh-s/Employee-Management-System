@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { getUser, logout } from '../lib/auth';
+import { getUser, isAdmin, logout } from '../lib/auth';
 
 export default function PageHeader({ title, subtitle, action }) {
   const navigate = useNavigate();
@@ -8,8 +8,9 @@ export default function PageHeader({ title, subtitle, action }) {
   const initial = username.charAt(0).toUpperCase();
 
   const handleLogout = async () => {
+    const adminSession = isAdmin();
     await logout();
-    navigate('/');
+    navigate(adminSession ? '/admin/login' : '/');
   };
 
   return (
